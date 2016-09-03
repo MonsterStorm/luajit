@@ -18,7 +18,7 @@ make HOST_CC="gcc -m32" CROSS=$NDKP TARGET_SYS=Linux TARGET_FLAGS="$NDKF"
 
 if [ -f $SRCDIR/src/libluajit.a ]; then
 mkdir -p $DESTDIR
-mv $SRCDIR/src/libluajit.a $DESTDIR/libluajit.a
+cp $SRCDIR/src/{libluajit.a,lua.h,lauxlib.h,lua.hpp,luaconf.h,luajit.h,lualib.h} $DESTDIR
 fi;
 
 # Android/ARM, armeabi-v7a (ARMv7 VFP), Android 4.0+ (ICS)
@@ -30,7 +30,7 @@ make HOST_CC="gcc -m32" CROSS=$NDKP TARGET_SYS=Linux TARGET_FLAGS="$NDKF $NDKARC
 
 if [ -f $SRCDIR/src/libluajit.a ]; then
 mkdir -p $DESTDIR
-mv $SRCDIR/src/libluajit.a $DESTDIR/libluajit.a
+cp $SRCDIR/src/{libluajit.a,lua.h,lauxlib.h,lua.hpp,luaconf.h,luajit.h,lualib.h} $DESTDIR
 fi;
 
 # Android/x86, x86 (i686 SSE3), Android 4.0+ (ICS)
@@ -45,7 +45,7 @@ make HOST_CC="gcc -m32" CROSS=$NDKP TARGET_SYS=Linux TARGET_FLAGS="$NDKF"
 
 if [ -f $SRCDIR/src/libluajit.a ]; then
 mkdir -p $DESTDIR
-mv $SRCDIR/src/libluajit.a $DESTDIR/libluajit.a
+cp $SRCDIR/src/{libluajit.a,lua.h,lauxlib.h,lua.hpp,luaconf.h,luajit.h,lualib.h} $DESTDIR
 fi;
 
 make clean
